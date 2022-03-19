@@ -1,0 +1,1784 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Source Sans Pro', sans-serif, serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 400vh;
+
+}
+
+/* HEADER */
+
+video{
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+    pointer-events: none;
+}
+.video{
+    background-color: #000;
+}
+.video p:nth-child(1){
+    position: absolute;
+    color: white;
+    font-size: 10rem;
+    width: 100%;
+    margin-top: 20%;
+    text-align: center;
+}
+.video p:nth-child(2){
+    
+    position: absolute;
+    color: white;
+    font-size: 15rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 35%;
+}
+.video p:nth-child(2) a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.video P{
+    animation: inText 2s 1 linear  0s  ;
+}
+
+
+
+  @keyframes inText {
+      from{
+          opacity:0;
+      }
+      to{
+          opacity: 1;
+      }
+      
+  }
+
+    /* NAV */
+
+
+nav{
+    margin-top: 40px;
+    font-size: 4rem;
+}
+nav ul{
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+
+    list-style: none;
+    
+}
+nav ul li{
+    float: left;
+    width: 33%;
+    text-align: center;
+
+}
+nav ul li:nth-child(odd){
+    
+
+    border-left: 1px solid  rgb(75, 54, 192);
+    border-right: 1px solid  rgb(75, 54, 192);
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    
+
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(44, 44, 44);
+    border: none;
+
+    box-shadow: -5px 5px 10px rgb(75, 54, 192);
+    border-right: none;
+    transition: 1s;
+}
+
+
+nav ul li:hover{
+    transition: 1s ease-in;
+    border-right: none;
+}
+
+.clearfix::after{
+    content:"";
+    clear: both;
+    display:block;
+    clear:both;
+}
+
+
+
+  /* MAIN */
+
+
+  main{
+      margin-top: 100px;
+      margin-bottom: 120px;
+      width: 100%;
+      height: 95vh;
+  }
+  main section ul{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    
+}
+main section ul li{
+
+    float: left;
+    height: 95vh;
+    width: 30%;
+    margin: 0 10%;
+    border: 2px solid rgb(75, 54, 192);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    
+
+    
+}
+main section ul li:nth-child(3), main section ul li:nth-child(4){
+    margin-top: 20px;   
+}
+main section ul li:nth-child(3) i{
+    color: white;
+}
+main section ul li:nth-child(3) p:nth-child(5) i{
+    color: red;
+    position: relative;
+    line-height: 300px;
+    font-size: 4rem;
+    left: 45%;
+}
+main section ul li h2{
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom:  2px solid rgb(75, 54, 192);
+    margin-bottom: 30px;
+    
+}
+
+main section ul li p{
+    font-size: 3rem;
+    text-align: justify;
+    
+}
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: rgb(221, 221, 221);
+    text-align: center;
+    font-size: 1.5rem;
+    border-top: 2px solid rgb(75, 54, 192);
+    margin-top: auto;
+    
+
+}
+
+ /* LOGOUT*/ 
+ .logOut{
+    position: fixed;
+    display: block;
+    right: 1%;
+    top: 1vh;
+ }
+ .logOut a{
+     text-decoration: none;
+     color: rgb(107, 107, 107);
+     opacity: 1;
+     font-size: 4rem;
+ }
+/* mobile -------------------------------------------------------------------------------------------- */
+#mobland,#mobnav{
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* Ipad Pro landscape */
+
+
+@media screen and (max-width:1366px) and (orientation:landscape) and (min-width:813px) {
+    body{
+        max-width:100vw;
+        height: 210vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+        display: none;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 4rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 47vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 15vh;
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 15vh;
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -70%;
+        }
+        to{
+            margin-top: 3vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 9rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 88%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 5rem;
+        padding: 10px 0 0 10px;
+    }
+
+
+        #mobmain ul li p{
+            font-size: 2rem;
+        }
+        #mobmain ul li h2{
+            font-size: 4rem;
+        }
+        #mobmain ul li{
+           width: 40%;
+           margin: 0 5%;
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 50vh;
+        }
+        #mobmain section ul li:nth-child(1),#mobmain section ul li:nth-child(2){
+            margin-top:40vh;
+        }
+        #mobmain section ul li:nth-child(3),#mobmain section ul li:nth-child(4){
+            margin-top:5vh;
+        }
+        main section ul li:nth-child(3) p:nth-child(5) i{
+            line-height: 100px;
+            font-size: 5rem;
+            left: 45%;
+        }
+    
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 4rem;
+    }
+}
+
+/* Desctop */
+
+@media (max-width:1336px)  {
+    #mobmain ul li p{
+        font-size: 1.5rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+}
+/* Ipad 10 landcsape */
+
+@media (max-width:1112px) {
+    #mobmain ul li p{
+        font-size: 1.7rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2.5rem;
+    }
+}
+
+
+/* IPad Pro */
+
+@media (max-width:1024px) and (orientation:portrait) {
+    body{
+        max-width:100vw;
+        height: 210vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+        display: none;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 4rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 47vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 15vh;
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 15vh;
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -70%;
+        }
+        to{
+            margin-top: 3vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 9rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 70%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 5rem;
+        padding: 10px 0 0 10px;
+    }
+
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    #mobmain ul li p{
+        font-size: 2rem;
+    }
+    #mobmain ul li h2{
+        font-size: 3.2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:24vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        margin-left: 20%;
+        width: 60%;
+        height: 30vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        font-size: 5rem;
+        left: 45%;
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 4rem;
+    }
+}
+
+
+
+/* Samsung landsape */
+
+@media (max-width:740px) and (orientation:landscape) {
+    body{
+        max-width:100vw;
+        height: 365vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+        display: none;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 78vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 25vh;
+
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    
+    }
+
+    #mobmain ul li p{
+        font-size: 1.6rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:32vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        margin-left: 20%;
+        width: 60%;
+        height: 60vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        font-size: 4rem;
+        left: 45%;
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* IPHONE X/XS landsace */
+
+
+
+
+@media (max-width:812px) and (orientation:landscape) {
+    body{
+        max-width:100vw;
+        height: 365vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+        display: none;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 78vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 25vh;
+
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    
+    }
+
+    #mobmain ul li p{
+        font-size: 1.6rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:34vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        margin-left: 20%;
+        width: 60%;
+        height: 60vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+
+/* Samsung landsape */
+
+@media (max-width:740px) and (orientation:landscape) {
+    body{
+        max-width:100vw;
+        height: 365vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+        display: none;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 78vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 25vh;
+
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    
+    }
+
+    #mobmain ul li p{
+        font-size: 1.6rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:32vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        margin-left: 20%;
+        width: 60%;
+        height: 60vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+/* Desktop - small */
+
+@media (max-width:630px){
+    body{
+        max-width:100vw;
+        height: 260vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+    }
+    
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2.4rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 32vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 10vh;
+       
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 10vh; 
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        pointer-events: all;
+        color: white;
+        z-index: 3;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    }
+
+    #mobmain ul li p{
+        font-size: 1.8rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2.2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:20vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+        height: 40vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        font-size: 2.4rem;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+
+
+
+
+/* Iphone 6/7/8 plus */
+
+@media (max-width:414px) and (orientation:portrait) {
+    body{
+        max-width:100vw;
+        height: 260vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+    }
+    
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2.4rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 32vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 10vh;
+       
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 10vh; 
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        pointer-events: all;
+        color: white;
+        z-index: 3;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    }
+
+    #mobmain ul li p{
+        font-size: 2rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2.4rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:20vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+        height: 40vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        font-size: 2.4rem;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+/* IPHONE X */
+
+
+
+
+
+
+@media (max-width:375px) and (orientation:portrait) {
+    body{
+        max-width:100vw;
+        height: 260vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+    }
+    
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 32vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 10vh;
+       
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 10vh;
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        pointer-events: all;
+        color: white;
+        z-index: 3;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    }
+
+    #mobmain ul li p{
+        font-size: 1.6rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:20vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+        height: 40vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
+
+
+
+
+/* Samsung */
+
+
+
+@media (max-width:360px) and (orientation:portrait) {
+    body{
+        max-width:100vw;
+        height: 260vh;
+    }
+    .video{
+        opacity: 0;
+        left: 100%;
+    }
+   
+    nav{
+        display: none;
+    }
+    nav ul{
+        width: 100%;
+        font-size: 2rem;
+    }
+   
+    nav.show{
+        width: 100%;
+        z-index: 2;
+        display: block;     
+       position: fixed;
+       height: 32vh;
+       opacity: 1;
+        background-color: rgba(0, 0, 0, 0.651);
+        animation: showing 1.5s 1 ease-in-out  0s  ;
+    }
+    nav.show::after{
+        content: "";
+        z-index: -1;
+        position: relative;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.651);
+        width: 100%;
+        height: 300vh;
+        animation: showingbg 1.5s 1 ease-in-out  0s  ;
+
+    }
+    nav.show ul li{
+       
+        clear: both;
+        border-right: none;
+        border-left: none;
+        display: block;
+        height: 10vh;
+       
+        width: 100%;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+        
+    }
+    nav.show ul li a{
+        height: 100%;
+        line-height: 10vh;
+    }
+    nav.show ul li:nth-child(1){
+        clear: both;
+        border-right: none;
+        margin-top: 2vh;
+        border-top:rgb(75, 54, 192) 2px solid;
+        border-bottom: rgb(75, 54, 192) 2px solid;
+    }
+    
+    @keyframes showing {
+        from{
+            margin-top: -50%;
+        }
+        to{
+            margin-top: 5.5vh;
+        }
+
+    }
+    @keyframes showingbg {
+        from{
+           opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+
+    #mobland{
+        opacity: 1;
+        position: static;
+        pointer-events: all;
+        color: white;
+        text-align: center;
+        height: 40vh;
+    }
+    #mobland p{
+        margin-top: 30vh;
+        font-size: 5rem; 
+    }
+    #mobland::after{
+       content: "";
+       display: block;
+       position: absolute;
+       left: 0;
+       top: 0;
+       opacity: 0.6;
+       width: 100%;
+       height: 100%;
+       background-image: url(bg_planet.jpg);
+       background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #mobnav{
+        opacity: 1;
+        position: fixed;
+        display: block;
+        z-index: 3;
+        pointer-events: all;
+        color: white;
+    }
+    #mobnav i{
+        cursor: pointer;
+        font-size: 3rem;
+        padding: 10px 0 0 10px;
+    }
+    
+    main, main section ul{
+        width: 100%;
+    }
+    main ul li{
+        margin: 0;
+        clear: left;
+        position: static;
+    }
+
+    #mobmain ul li p{
+        font-size: 1.6rem;
+    }
+    #mobmain ul li h2{
+        font-size: 2rem;
+    }
+    #mobmain section ul li:nth-child(1){
+        margin-top:20vh;
+    }
+    main section ul li:nth-child(1), main section ul li:nth-child(2),main section ul li:nth-child(3), main section ul li:nth-child(4){
+        margin-top: 10px;
+        width: 100%;
+        margin-left: 0;
+        height: 40vh;
+    }
+       
+    main section ul li:nth-child(3) p:nth-child(5) i{
+        line-height: 100px;
+        
+    }
+       
+    
+    
+     .logOut a{
+        text-decoration: none;
+        margin-right: 5px;
+        color: rgb(107, 107, 107);
+        opacity: 1;
+        font-size: 3rem;
+    }
+}
